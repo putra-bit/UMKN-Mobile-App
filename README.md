@@ -1,863 +1,262 @@
 <p align="center">
     <img src="https://jasalogocepat.com/wp-content/uploads/2024/08/8-Kegunaan-dari-Logo-untuk-Produk-UMKM-jasalogocepat.jpg" align="center" width="30%">
 </p>
-<p align="center"><h1 align="center">UMKN-MOBILE-APP.GIT</h1></p>
+
+<h1 align="center">UMKN Mobile App</h1>
+
 <p align="center">
-	<em><code>❯ REPLACE-ME</code></em>
+    <em>Mobile Application for Small and Medium Enterprises (UMKM) Management</em>
 </p>
+
 <p align="center">
-	<img src="https://img.shields.io/github/license/putra-bit/UMKN-Mobile-App.git?style=default&logo=opensourceinitiative&logoColor=white&color=38383b" alt="license">
-	<img src="https://img.shields.io/github/last-commit/putra-bit/UMKN-Mobile-App.git?style=default&logo=git&logoColor=white&color=38383b" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/putra-bit/UMKN-Mobile-App.git?style=default&color=38383b" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/putra-bit/UMKN-Mobile-App.git?style=default&color=38383b" alt="repo-language-count">
+    <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter">
+    <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart">
+    <img src="https://img.shields.io/github/license/putra-bit/UMKN-Mobile-App.git?style=for-the-badge" alt="license">
+    <img src="https://img.shields.io/github/last-commit/putra-bit/UMKN-Mobile-App.git?style=for-the-badge" alt="last-commit">
 </p>
-<p align="center"><!-- default option, no dependency badges. -->
-</p>
+
+---
+
+## 📖 Table of Contents
+
+- [Overview](#-overview)
+- [Features](#-features)
+- [Screenshots](#-screenshots)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the App](#running-the-app)
+  - [Testing](#testing)
+- [Architecture](#-architecture)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🎯 Overview
+
+UMKN Mobile App is a comprehensive Flutter-based mobile application designed to support Small and Medium Enterprises (UMKM) in Indonesia. The app provides essential tools for business management, user authentication, and administrative functions to help UMKM owners streamline their operations.
+
+**Key Highlights:**
+- Cross-platform support (Android, iOS, Web, Desktop)
+- Role-based access control (Admin/User)
+- Modern Flutter UI with responsive design
+- Secure authentication system
+- Scalable architecture with proper separation of concerns
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication System
+- User registration and login
+- Secure session management
+- Password validation and security
+
+### 👥 Role-Based Access
+- **User Dashboard**: Business management tools for UMKM owners
+- **Admin Panel**: Administrative controls and oversight features
+- Profile management and settings
+
+### 🎨 User Experience
+- Modern and intuitive interface
+- Responsive design for all screen sizes
+- Dark/Light theme support (theme provider implemented)
+- Custom UI components for consistency
+
+### 🔧 Technical Features
+- Backend integration ready
+- RESTful API support
+- State management with Provider pattern
+- Modular component architecture
+
+---
+
+## 📱 Screenshots
+
+> Add screenshots of your app here to showcase the UI and key features
+
+---
+
+## 📁 Project Structure
+
+```
+UMKN-Mobile-App/
+├── android/                 # Android-specific files
+├── ios/                     # iOS-specific files
+├── web/                     # Web deployment files
+├── windows/                 # Windows desktop files
+├── linux/                  # Linux desktop files
+├── macos/                  # macOS desktop files
+├── lib/                    # Main Flutter source code
+│   ├── main.dart           # App entry point
+│   ├── Components/         # Reusable UI components
+│   │   └── MyTextField.dart
+│   ├── controller/         # State management & backend logic
+│   │   ├── backend.dart    # API integration
+│   │   └── provider_theme.dart # Theme management
+│   └── pages/              # Screen/Page widgets
+│       ├── login.dart      # Login screen
+│       ├── registerPage.dart # Registration screen
+│       ├── HomeUser.dart   # User dashboard
+│       └── HomeAdmin.dart  # Admin dashboard
+├── test/                   # Unit and widget tests
+├── pubspec.yaml           # Dependencies and project config
+└── README.md              # This file
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Before running this project, make sure you have the following installed:
+
+- **Flutter SDK** (Latest stable version)
+- **Dart SDK** (Comes with Flutter)
+- **Android Studio** or **VS Code** with Flutter extensions
+- **Git** for version control
+
+**Platform-specific requirements:**
+- **Android**: Android Studio, Android SDK
+- **iOS**: Xcode (macOS only)
+- **Web**: Chrome browser
+- **Desktop**: Platform-specific build tools
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/putra-bit/UMKN-Mobile-App.git
+cd UMKN-Mobile-App
+```
+
+2. **Install dependencies**
+```bash
+flutter pub get
+```
+
+3. **Verify Flutter installation**
+```bash
+flutter doctor
+```
+
+4. **Check available devices**
+```bash
+flutter devices
+```
+
+### Running the App
+
+Choose your target platform:
+
+**Android/iOS:**
+```bash
+flutter run
+```
+
+**Web:**
+```bash
+flutter run -d chrome
+```
+
+**Desktop (Windows):**
+```bash
+flutter run -d windows
+```
+
+**Desktop (macOS):**
+```bash
+flutter run -d macos
+```
+
+**Desktop (Linux):**
+```bash
+flutter run -d linux
+```
+
+### Testing
+
+Run the test suite:
+
+```bash
+# Run all tests
+flutter test
+
+# Run tests with coverage
+flutter test --coverage
+
+# Run specific test file
+flutter test test/widget_test.dart
+```
+
+---
+
+## 🏗️ Architecture
+
+This project follows Flutter best practices with a clean architecture approach:
+
+### State Management
+- **Provider Pattern**: Used for theme management and app state
+- **Stateful/Stateless Widgets**: For local component state
+
+### Project Organization
+- **Components**: Reusable UI widgets
+- **Pages**: Screen-level widgets
+- **Controllers**: Business logic and state management
+- **Backend**: API integration and data handling
+
+### Key Components
+- `MyTextField`: Custom input field component
+- `ThemeProvider`: App-wide theme management
+- `Backend`: API service integration
+- Authentication pages with form validation
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to improve the UMKN Mobile App! Here's how you can help:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** to the branch (`git push origin feature/AmazingFeature`)
+5. **Open** a Pull Request
+
+### Development Guidelines
+- Follow Flutter/Dart style guidelines
+- Write meaningful commit messages
+- Add tests for new features
+- Update documentation as needed
+- Ensure code passes all existing tests
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- Flutter team for the amazing framework
+- UMKM community in Indonesia
+- Open source contributors
+- Logo design from [Jasa Logo Cepat](https://jasalogocepat.com/)
+
+---
+
+## 📞 Contact & Support
+
+- **GitHub Issues**: [Report bugs or request features](https://github.com/putra-bit/UMKN-Mobile-App.git/issues)
+- **Developer**: [putra-bit](https://github.com/putra-bit)
+
+---
+
 <p align="center">
-	<!-- default option, no dependency badges. -->
+    <strong>Built with ❤️ for Indonesian UMKM Community</strong>
 </p>
-<br>
-
-##  Table of Contents
-
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Project Structure](#-project-structure)
-  - [ Project Index](#-project-index)
-- [ Getting Started](#-getting-started)
-  - [ Prerequisites](#-prerequisites)
-  - [ Installation](#-installation)
-  - [ Usage](#-usage)
-  - [ Testing](#-testing)
-- [ Project Roadmap](#-project-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
-
----
-
-##  Overview
-
-<code>❯ REPLACE-ME</code>
-
----
-
-##  Features
-
-<code>❯ REPLACE-ME</code>
-
----
-
-##  Project Structure
-
-```sh
-└── UMKN-Mobile-App.git/
-    ├── README.md
-    ├── analysis_options.yaml
-    ├── android
-    │   ├── .gitignore
-    │   ├── app
-    │   ├── build.gradle.kts
-    │   ├── gradle
-    │   ├── gradle.properties
-    │   └── settings.gradle.kts
-    ├── ios
-    │   ├── .gitignore
-    │   ├── Flutter
-    │   ├── Runner
-    │   ├── Runner.xcodeproj
-    │   ├── Runner.xcworkspace
-    │   └── RunnerTests
-    ├── lib
-    │   ├── Components
-    │   ├── controller
-    │   ├── main.dart
-    │   └── pages
-    ├── linux
-    │   ├── .gitignore
-    │   ├── CMakeLists.txt
-    │   ├── flutter
-    │   └── runner
-    ├── macos
-    │   ├── .gitignore
-    │   ├── Flutter
-    │   ├── Runner
-    │   ├── Runner.xcodeproj
-    │   ├── Runner.xcworkspace
-    │   └── RunnerTests
-    ├── pubspec.lock
-    ├── pubspec.yaml
-    ├── test
-    │   └── widget_test.dart
-    ├── web
-    │   ├── favicon.png
-    │   ├── icons
-    │   ├── index.html
-    │   └── manifest.json
-    └── windows
-        ├── .gitignore
-        ├── CMakeLists.txt
-        ├── flutter
-        └── runner
-```
-
-
-###  Project Index
-<details open>
-	<summary><b><code>UMKN-MOBILE-APP.GIT/</code></b></summary>
-	<details> <!-- __root__ Submodule -->
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/analysis_options.yaml'>analysis_options.yaml</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/pubspec.yaml'>pubspec.yaml</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- ios Submodule -->
-		<summary><b>ios</b></summary>
-		<blockquote>
-			<details>
-				<summary><b>Runner.xcworkspace</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner.xcworkspace/contents.xcworkspacedata'>contents.xcworkspacedata</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-					<details>
-						<summary><b>xcshareddata</b></summary>
-						<blockquote>
-							<table>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings'>WorkspaceSettings.xcsettings</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist'>IDEWorkspaceChecks.plist</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							</table>
-						</blockquote>
-					</details>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>Runner.xcodeproj</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner.xcodeproj/project.pbxproj'>project.pbxproj</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-					<details>
-						<summary><b>xcshareddata</b></summary>
-						<blockquote>
-							<details>
-								<summary><b>xcschemes</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme'>Runner.xcscheme</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-						</blockquote>
-					</details>
-					<details>
-						<summary><b>project.xcworkspace</b></summary>
-						<blockquote>
-							<table>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata'>contents.xcworkspacedata</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							</table>
-							<details>
-								<summary><b>xcshareddata</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings'>WorkspaceSettings.xcsettings</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									<tr>
-										<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist'>IDEWorkspaceChecks.plist</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-						</blockquote>
-					</details>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>Flutter</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Flutter/AppFrameworkInfo.plist'>AppFrameworkInfo.plist</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Flutter/Debug.xcconfig'>Debug.xcconfig</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Flutter/Release.xcconfig'>Release.xcconfig</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>RunnerTests</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/RunnerTests/RunnerTests.swift'>RunnerTests.swift</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>Runner</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner/Runner-Bridging-Header.h'>Runner-Bridging-Header.h</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner/AppDelegate.swift'>AppDelegate.swift</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner/Info.plist'>Info.plist</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-					<details>
-						<summary><b>Assets.xcassets</b></summary>
-						<blockquote>
-							<details>
-								<summary><b>LaunchImage.imageset</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json'>Contents.json</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-							<details>
-								<summary><b>AppIcon.appiconset</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json'>Contents.json</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-						</blockquote>
-					</details>
-					<details>
-						<summary><b>Base.lproj</b></summary>
-						<blockquote>
-							<table>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner/Base.lproj/Main.storyboard'>Main.storyboard</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/ios/Runner/Base.lproj/LaunchScreen.storyboard'>LaunchScreen.storyboard</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							</table>
-						</blockquote>
-					</details>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-	<details> <!-- lib Submodule -->
-		<summary><b>lib</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/lib/main.dart'>main.dart</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-			<details>
-				<summary><b>Components</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/lib/Components/MyTextFIeld.dart'>MyTextFIeld.dart</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>pages</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/lib/pages/registerPage.dart'>registerPage.dart</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/lib/pages/login.dart'>login.dart</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/lib/pages/HomeUser.dart'>HomeUser.dart</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/lib/pages/HomeAdmin.dart'>HomeAdmin.dart</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>controller</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/lib/controller/provider_thame.dart'>provider_thame.dart</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/lib/controller/backend.dart'>backend.dart</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-	<details> <!-- android Submodule -->
-		<summary><b>android</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/android/build.gradle.kts'>build.gradle.kts</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/android/settings.gradle.kts'>settings.gradle.kts</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-			<details>
-				<summary><b>app</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/android/app/build.gradle.kts'>build.gradle.kts</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-					<details>
-						<summary><b>src</b></summary>
-						<blockquote>
-							<details>
-								<summary><b>main</b></summary>
-								<blockquote>
-									<details>
-										<summary><b>kotlin</b></summary>
-										<blockquote>
-											<details>
-												<summary><b>com</b></summary>
-												<blockquote>
-													<details>
-														<summary><b>example</b></summary>
-														<blockquote>
-															<details>
-																<summary><b>umkn_smk</b></summary>
-																<blockquote>
-																	<table>
-																	<tr>
-																		<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/android/app/src/main/kotlin/com/example/umkn_smk/MainActivity.kt'>MainActivity.kt</a></b></td>
-																		<td><code>❯ REPLACE-ME</code></td>
-																	</tr>
-																	</table>
-																</blockquote>
-															</details>
-														</blockquote>
-													</details>
-												</blockquote>
-											</details>
-										</blockquote>
-									</details>
-								</blockquote>
-							</details>
-						</blockquote>
-					</details>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-	<details> <!-- windows Submodule -->
-		<summary><b>windows</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/CMakeLists.txt'>CMakeLists.txt</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-			<details>
-				<summary><b>flutter</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/flutter/CMakeLists.txt'>CMakeLists.txt</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/flutter/generated_plugin_registrant.cc'>generated_plugin_registrant.cc</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/flutter/generated_plugin_registrant.h'>generated_plugin_registrant.h</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/flutter/generated_plugins.cmake'>generated_plugins.cmake</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>runner</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/flutter_window.h'>flutter_window.h</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/win32_window.cpp'>win32_window.cpp</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/utils.h'>utils.h</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/resource.h'>resource.h</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/Runner.rc'>Runner.rc</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/CMakeLists.txt'>CMakeLists.txt</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/flutter_window.cpp'>flutter_window.cpp</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/win32_window.h'>win32_window.h</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/runner.exe.manifest'>runner.exe.manifest</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/main.cpp'>main.cpp</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/windows/runner/utils.cpp'>utils.cpp</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-	<details> <!-- test Submodule -->
-		<summary><b>test</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/test/widget_test.dart'>widget_test.dart</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- macos Submodule -->
-		<summary><b>macos</b></summary>
-		<blockquote>
-			<details>
-				<summary><b>Runner.xcworkspace</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner.xcworkspace/contents.xcworkspacedata'>contents.xcworkspacedata</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-					<details>
-						<summary><b>xcshareddata</b></summary>
-						<blockquote>
-							<table>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist'>IDEWorkspaceChecks.plist</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							</table>
-						</blockquote>
-					</details>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>Runner.xcodeproj</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner.xcodeproj/project.pbxproj'>project.pbxproj</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-					<details>
-						<summary><b>xcshareddata</b></summary>
-						<blockquote>
-							<details>
-								<summary><b>xcschemes</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme'>Runner.xcscheme</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-						</blockquote>
-					</details>
-					<details>
-						<summary><b>project.xcworkspace</b></summary>
-						<blockquote>
-							<details>
-								<summary><b>xcshareddata</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist'>IDEWorkspaceChecks.plist</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-						</blockquote>
-					</details>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>Flutter</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Flutter/GeneratedPluginRegistrant.swift'>GeneratedPluginRegistrant.swift</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Flutter/Flutter-Debug.xcconfig'>Flutter-Debug.xcconfig</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Flutter/Flutter-Release.xcconfig'>Flutter-Release.xcconfig</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>RunnerTests</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/RunnerTests/RunnerTests.swift'>RunnerTests.swift</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>Runner</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/DebugProfile.entitlements'>DebugProfile.entitlements</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/AppDelegate.swift'>AppDelegate.swift</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/Info.plist'>Info.plist</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/MainFlutterWindow.swift'>MainFlutterWindow.swift</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/Release.entitlements'>Release.entitlements</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-					<details>
-						<summary><b>Assets.xcassets</b></summary>
-						<blockquote>
-							<details>
-								<summary><b>AppIcon.appiconset</b></summary>
-								<blockquote>
-									<table>
-									<tr>
-										<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json'>Contents.json</a></b></td>
-										<td><code>❯ REPLACE-ME</code></td>
-									</tr>
-									</table>
-								</blockquote>
-							</details>
-						</blockquote>
-					</details>
-					<details>
-						<summary><b>Configs</b></summary>
-						<blockquote>
-							<table>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/Configs/AppInfo.xcconfig'>AppInfo.xcconfig</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/Configs/Debug.xcconfig'>Debug.xcconfig</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/Configs/Release.xcconfig'>Release.xcconfig</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/Configs/Warnings.xcconfig'>Warnings.xcconfig</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							</table>
-						</blockquote>
-					</details>
-					<details>
-						<summary><b>Base.lproj</b></summary>
-						<blockquote>
-							<table>
-							<tr>
-								<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/macos/Runner/Base.lproj/MainMenu.xib'>MainMenu.xib</a></b></td>
-								<td><code>❯ REPLACE-ME</code></td>
-							</tr>
-							</table>
-						</blockquote>
-					</details>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-	<details> <!-- web Submodule -->
-		<summary><b>web</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/web/index.html'>index.html</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/web/manifest.json'>manifest.json</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- linux Submodule -->
-		<summary><b>linux</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/linux/CMakeLists.txt'>CMakeLists.txt</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-			<details>
-				<summary><b>flutter</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/linux/flutter/CMakeLists.txt'>CMakeLists.txt</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/linux/flutter/generated_plugin_registrant.cc'>generated_plugin_registrant.cc</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/linux/flutter/generated_plugin_registrant.h'>generated_plugin_registrant.h</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/linux/flutter/generated_plugins.cmake'>generated_plugins.cmake</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>runner</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/linux/runner/main.cc'>main.cc</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/linux/runner/my_application.cc'>my_application.cc</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/linux/runner/CMakeLists.txt'>CMakeLists.txt</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					<tr>
-						<td><b><a href='https://github.com/putra-bit/UMKN-Mobile-App.git/blob/master/linux/runner/my_application.h'>my_application.h</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-</details>
-
----
-##  Getting Started
-
-###  Prerequisites
-
-Before getting started with UMKN-Mobile-App.git, ensure your runtime environment meets the following requirements:
-
-- **Programming Language:** Dart
-- **Package Manager:** Pub, Gradle, Cmake
-
-
-###  Installation
-
-Install UMKN-Mobile-App.git using one of the following methods:
-
-**Build from source:**
-
-1. Clone the UMKN-Mobile-App.git repository:
-```sh
-❯ git clone https://github.com/putra-bit/UMKN-Mobile-App.git
-```
-
-2. Navigate to the project directory:
-```sh
-❯ cd UMKN-Mobile-App.git
-```
-
-3. Install the project dependencies:
-
-
-**Using `pub`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Dart-0175C2.svg?style={badge_style}&logo=dart&logoColor=white" />](https://dart.dev/)
-
-```sh
-❯ pub get
-```
-
-
-**Using `gradle`** &nbsp; [<img align="center" src="" />]()
-
-```sh
-❯ echo 'INSERT-INSTALL-COMMAND-HERE'
-```
-
-
-**Using `cmake`** &nbsp; [<img align="center" src="" />]()
-
-```sh
-❯ echo 'INSERT-INSTALL-COMMAND-HERE'
-```
-
-
-
-
-###  Usage
-Run UMKN-Mobile-App.git using the following command:
-**Using `pub`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Dart-0175C2.svg?style={badge_style}&logo=dart&logoColor=white" />](https://dart.dev/)
-
-```sh
-❯ dart {entrypoint}
-```
-
-
-**Using `gradle`** &nbsp; [<img align="center" src="" />]()
-
-```sh
-❯ echo 'INSERT-RUN-COMMAND-HERE'
-```
-
-
-**Using `cmake`** &nbsp; [<img align="center" src="" />]()
-
-```sh
-❯ echo 'INSERT-RUN-COMMAND-HERE'
-```
-
-
-###  Testing
-Run the test suite using the following command:
-**Using `pub`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Dart-0175C2.svg?style={badge_style}&logo=dart&logoColor=white" />](https://dart.dev/)
-
-```sh
-❯ pub run test
-```
-
-
-**Using `gradle`** &nbsp; [<img align="center" src="" />]()
-
-```sh
-❯ echo 'INSERT-TEST-COMMAND-HERE'
-```
-
-
-**Using `cmake`** &nbsp; [<img align="center" src="" />]()
-
-```sh
-❯ echo 'INSERT-TEST-COMMAND-HERE'
-```
